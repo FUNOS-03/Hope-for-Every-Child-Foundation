@@ -1,6 +1,7 @@
+
 /* =========================================
    HOPE FOR EVERY CHILD FOUNDATION
-   PART 2 - DESKTOP & RESPONSIVE CSS
+   PART 3 - COMPLETE RESPONSIVE CSS
    ========================================= */
 
 
@@ -31,6 +32,11 @@ body {
     letter-spacing: 0.02em;
     color: #333333;
     background-color: #f5f9f7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 
@@ -77,7 +83,6 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-
     background-color: #146b57;
     padding: 1.2rem;
 }
@@ -88,25 +93,17 @@ nav a {
     font-weight: 700;
     padding: 0.5rem 0.8rem;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-
-
-/* Navigation hover */
 
 nav a:hover {
     background-color: #0d4d3e;
 }
 
-
-/* Navigation keyboard focus */
-
-nav a:focus {
+nav a:focus-visible {
     outline: 3px solid #ffffff;
     outline-offset: 3px;
 }
-
-
-/* Navigation active */
 
 nav a:active {
     background-color: #08382e;
@@ -186,9 +183,7 @@ main {
 
 .cards {
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -196,20 +191,17 @@ main {
 .card {
     background-color: #ffffff;
     padding: 1.5rem;
-
     border: 1px solid #d5e5df;
     border-radius: 10px;
-
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card img {
     display: block;
     width: 100%;
     height: 180px;
-
     object-fit: cover;
-
     border-radius: 8px;
     margin-bottom: 1rem;
 }
@@ -218,9 +210,6 @@ main {
 .card h3 {
     margin-bottom: 1rem;
 }
-
-
-/* Card hover */
 
 .card:hover {
     transform: translateY(-4px);
@@ -234,41 +223,31 @@ main {
 
 .button {
     display: inline-block;
-
     background-color: #146b57;
     color: #ffffff;
-
     padding: 0.8rem 1.5rem;
-
     border: none;
     border-radius: 6px;
-
     text-decoration: none;
     font-weight: 700;
-
     cursor: pointer;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease;
 }
-
-
-/* Button hover */
 
 .button:hover {
     background-color: #0d4d3e;
+    transform: translateY(-2px);
 }
 
-
-/* Button focus */
-
-.button:focus {
+.button:focus-visible {
     outline: 3px solid #9ed8c7;
     outline-offset: 3px;
 }
 
-
-/* Button active */
-
 .button:active {
     background-color: #08382e;
+    transform: translateY(0);
 }
 
 
@@ -278,9 +257,7 @@ main {
 
 .call-to-action {
     text-align: center;
-
     background-color: #dcefe8;
-
     padding: 3rem 1.5rem;
     margin: 2rem 0;
 }
@@ -315,24 +292,17 @@ input,
 select,
 textarea {
     width: 100%;
-
     padding: 0.8rem;
-
     font-family: Arial, sans-serif;
     font-size: 1rem;
-
     border: 1px solid #b8cfc7;
     border-radius: 5px;
-
     background-color: #ffffff;
 }
 
 textarea {
     resize: vertical;
 }
-
-
-/* Form focus */
 
 input:focus,
 select:focus,
@@ -341,19 +311,80 @@ textarea:focus {
     border-color: #146b57;
 }
 
+input:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+    border-color: #b3261e;
+}
+
 
 /* =========================================
-   13. FOOTER
+   13. FORM RESPONSE MESSAGES
+   ========================================= */
+
+#enquiryMessage,
+#contactMessageDisplay,
+#searchMessage {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+#enquiryMessage,
+#contactMessageDisplay {
+    color: #146b57;
+}
+
+
+/* =========================================
+   14. PROGRAMME SEARCH
+   ========================================= */
+
+#programmeSearch {
+    max-width: 600px;
+    display: block;
+    margin: 1rem auto;
+    padding: 0.9rem;
+    border: 1px solid #b8cfc7;
+    border-radius: 6px;
+}
+
+
+/* =========================================
+   15. INTERACTIVE ELEMENTS
+   ========================================= */
+
+button {
+    font-family: Arial, sans-serif;
+}
+
+button:focus-visible {
+    outline: 3px solid #9ed8c7;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   16. INTERACTIVE MAP
+   ========================================= */
+
+#foundationMap {
+    width: 100%;
+    min-height: 300px;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+}
+
+
+/* =========================================
+   17. FOOTER
    ========================================= */
 
 footer {
     background-color: #173c3b;
     color: #ffffff;
-
     text-align: center;
-
     padding: 2rem;
-
     margin-top: 3rem;
 }
 
@@ -363,7 +394,7 @@ footer p {
 
 
 /* =========================================
-   14. TABLET RESPONSIVE DESIGN
+   18. TABLET RESPONSIVE DESIGN
    ========================================= */
 
 @media (max-width: 900px) {
@@ -383,7 +414,7 @@ footer p {
 
 
 /* =========================================
-   15. MOBILE RESPONSIVE DESIGN
+   19. MOBILE RESPONSIVE DESIGN
    ========================================= */
 
 @media (max-width: 600px) {
@@ -447,9 +478,33 @@ footer p {
     .call-to-action {
         padding: 2rem 1rem;
     }
+
+    #foundationMap {
+        min-height: 300px;
+    }
 }
 
 
 /* =========================================
-   END OF PART 2 CSS
+   20. REDUCED MOTION ACCESSIBILITY
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+
+/* =========================================
+   END OF PART 3 CSS
    ========================================= */
