@@ -460,3 +460,14 @@ The following resources were used during website development:
 ---
 
 **End of README**
+## Live Website
+
+The Hope for Every Child Foundation website is deployed on Netlify.
+
+Visit the live website here:
+
+https://6ae6fc7794603ba501d9b8bf--helpful-kheer-c33c4e.netlify.app/
+
+## Deployment Platform
+
+The website is hosted using Netlify and connected to the GitHub repository for deployment updates.
