@@ -1,5 +1,4 @@
-
 User-agent: *
 Allow: /
 
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://6ae6fc7794603ba501d9b8bf--helpful-kheer-c33c4e.netlify.app/sitemap.xml
