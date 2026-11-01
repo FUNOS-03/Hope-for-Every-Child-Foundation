@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,104 +6,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Programmes | Hope for Every Child Foundation</title>
+    <title>Child Education, Nutrition and Community Programmes | Hope for Every Child</title>
 
     <meta name="description"
-        content="Explore the education, nutrition and community support programmes offered by Hope for Every Child Foundation.">
+        content="Explore Hope for Every Child Foundation's education, nutrition and community support programmes for vulnerable children and families in South Africa.">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords"
+        content="child education programmes South Africa, child nutrition support, community development, volunteer opportunities, child support">
+
+    <meta name="author" content="Hope for Every Child Foundation">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title"
+        content="Our Programmes | Hope for Every Child Foundation">
+
+    <meta property="og:description"
+        content="Discover our education, nutrition and community support programmes for children and families.">
+
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="programmes.html">Programmes</a>
-        <a href="enquiry.html">Get Involved</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <header>
+        <h1>Hope for Every Child Foundation</h1>
 
-    <!-- Main content -->
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Our Programmes</a>
+            <a href="enquiry.html">Make an Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
     <main>
 
-        <!-- Introduction -->
         <section class="intro">
-            <h1>Our Programmes</h1>
+            <h2>Our Child Support Programmes</h2>
 
             <p>
-                Our programmes are designed to provide practical support
-                and opportunities that can help children learn, grow and
-                develop.
+                Hope for Every Child Foundation focuses on programmes
+                designed to improve the lives of vulnerable children
+                and families in South Africa. Our main focus areas
+                include education, nutrition and community development.
             </p>
         </section>
 
-        <!-- Programme cards -->
+        <section class="intro">
+
+            <h2>Find a Programme</h2>
+
+            <p>
+                Search for an education, nutrition or community support
+                programme that interests you.
+            </p>
+
+            <input
+                type="search"
+                id="programmeSearch"
+                placeholder="Search education, nutrition or community..."
+                aria-label="Search programmes"
+            >
+
+            <p id="searchMessage" aria-live="polite"></p>
+
+        </section>
+
         <section class="programmes">
 
-            <div class="cards">
+            <div class="cards" id="programmeCards">
 
-                <!-- Education Programme -->
-                <article class="card">
+                <article class="card programme-card">
 
-                    <img src="images/education.jpg"
-                        alt="Children participating in an educational activity">
+                    <img
+                        src="images/education.jpg"
+                        alt="Children taking part in educational activities"
+                        loading="lazy"
+                    >
 
-                    <h2>Education Support</h2>
-
-                    <p>
-                        Our education programme focuses on helping children
-                        access learning resources and opportunities that
-                        support their academic development.
-                    </p>
+                    <h3>Education Support</h3>
 
                     <p>
-                        The programme can include educational materials,
-                        learning activities and community-based support.
+                        We support children's education by helping them
+                        access learning resources, school supplies and
+                        educational opportunities.
                     </p>
+
+                    <a href="enquiry.html" class="button">
+                        Enquire About Education
+                    </a>
 
                 </article>
 
-                <!-- Nutrition Programme -->
-                <article class="card">
+                <article class="card programme-card">
 
-                    <img src="images/nutrition.jpg"
-                        alt="Nutritious food prepared for children">
+                    <img
+                        src="images/nutrition.jpg"
+                        alt="Nutritious food provided through child nutrition support"
+                        loading="lazy"
+                    >
 
-                    <h2>Nutrition Support</h2>
-
-                    <p>
-                        Our nutrition programme aims to promote children's
-                        wellbeing by supporting access to nutritious food
-                        and basic nutritional assistance.
-                    </p>
+                    <h3>Nutrition Support</h3>
 
                     <p>
-                        Healthy nutrition can help children stay active,
-                        focused and ready to learn.
+                        Our nutrition programme aims to assist vulnerable
+                        children and families with food support and
+                        awareness of healthy eating.
                     </p>
+
+                    <a href="enquiry.html" class="button">
+                        Enquire About Nutrition
+                    </a>
 
                 </article>
 
-                <!-- Community Programme -->
-                <article class="card">
+                <article class="card programme-card">
 
-                    <img src="images/Volunteers.jpg"
-                        alt="Volunteers working together in the community">
+                    <img
+                        src="images/Volunteers.jpg"
+                        alt="Community volunteers working together to support children"
+                        loading="lazy"
+                    >
 
-                    <h2>Community Support</h2>
-
-                    <p>
-                        Our community support programme encourages people
-                        to work together to create positive opportunities
-                        for children.
-                    </p>
+                    <h3>Community Support</h3>
 
                     <p>
-                        Volunteers can contribute their time, skills and
-                        resources to support community activities.
+                        We encourage community involvement through
+                        volunteering, fundraising and activities that
+                        support children and families.
                     </p>
+
+                    <a href="enquiry.html" class="button">
+                        Enquire About Community Support
+                    </a>
 
                 </article>
 
@@ -110,14 +149,13 @@
 
         </section>
 
-        <!-- Call to action -->
-        <section class="call-to-action">
+        <section class="cta">
 
-            <h2>Want to Support Our Programmes?</h2>
+            <h2>Make a Difference</h2>
 
             <p>
-                Get in touch with us to learn more about volunteering,
-                supporting a programme or becoming involved.
+                You can help us create brighter futures by volunteering,
+                sponsoring a programme or supporting our work.
             </p>
 
             <a href="enquiry.html" class="button">
@@ -128,20 +166,14 @@
 
     </main>
 
-    <!-- Footer -->
     <footer>
-
         <p>
             &copy; 2026 Hope for Every Child Foundation.
             All rights reserved.
         </p>
-
-        <p>
-            Website Project by Lufuno Tshivhase
-        </p>
-
     </footer>
 
-</body>
+    <script src="script.js" defer></script>
 
+</body>
 </html>

@@ -1,212 +1,182 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Contact Us | Hope for Every Child Foundation</title>
 
-    <meta name="description"
-        content="Contact Hope for Every Child Foundation for enquiries, support and community information.">
+    <meta name="description" content="Contact Hope for Every Child Foundation in Pretoria or Johannesburg for assistance, programme information, volunteering and sponsorship enquiries.">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="contact Hope for Every Child, Pretoria foundation, Johannesburg foundation, child support, volunteer contact">
+
+    <meta name="author" content="Hope for Every Child Foundation">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Leaflet map stylesheet -->
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin=""
+    >
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="programmes.html">Programmes</a>
-        <a href="enquiry.html">Get Involved</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <header>
+        <h1>Hope for Every Child Foundation</h1>
 
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Our Programmes</a>
+            <a href="enquiry.html">Make an Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
 
-    <!-- Main content -->
     <main>
 
-        <!-- Introduction -->
         <section class="intro">
-
-            <h1>Contact Us</h1>
+            <h2>Contact Us</h2>
 
             <p>
-                We would love to hear from you. You can contact us for
-                programme information, volunteering opportunities or
-                general enquiries.
+                We would love to hear from you. Contact Hope for Every
+                Child Foundation for more information about our work,
+                programmes and opportunities to get involved.
             </p>
-
         </section>
 
-
-        <!-- Contact information -->
         <section class="programmes">
 
-            <h2>Our Contact Details</h2>
+            <h2>Our Contact Information</h2>
 
             <div class="cards">
 
-                <article class="card">
+                <div class="card">
+                    <h3>Pretoria Office</h3>
+                    <p><strong>Location:</strong> Pretoria, Gauteng</p>
+                    <p><strong>Email:</strong> info@hopeforeverychild.org</p>
+                    <p><strong>Telephone:</strong> 012 345 6789</p>
+                </div>
 
-                    <h3>Head Office</h3>
+                <div class="card">
+                    <h3>Johannesburg Office</h3>
+                    <p><strong>Location:</strong> Johannesburg, Gauteng</p>
+                    <p><strong>Email:</strong> community@hopeforeverychild.org</p>
+                    <p><strong>Telephone:</strong> 011 456 7890</p>
+                </div>
 
-                    <p>
-                        Pretoria, Gauteng
-                    </p>
-
-                    <p>
-                        Email: info@hopeforeverychild.org
-                    </p>
-
-                    <p>
-                        Phone: 012 345 6789
-                    </p>
-
-                </article>
-
-
-                <article class="card">
-
-                    <h3>Community Office</h3>
-
-                    <p>
-                        Johannesburg, Gauteng
-                    </p>
-
-                    <p>
-                        Email: community@hopeforeverychild.org
-                    </p>
-
-                    <p>
-                        Phone: 011 456 7890
-                    </p>
-
-                </article>
-
-
-                <article class="card">
-
+                <div class="card">
                     <h3>Office Hours</h3>
-
-                    <p>
-                        Monday - Friday
-                    </p>
-
-                    <p>
-                        08:00 - 16:30
-                    </p>
-
-                    <p>
-                        We aim to respond to enquiries as soon as possible.
-                    </p>
-
-                </article>
+                    <p>Monday to Friday</p>
+                    <p>08:00 – 16:30</p>
+                </div>
 
             </div>
 
         </section>
 
+        <!-- INTERACTIVE MAP -->
 
-        <!-- Contact form -->
+        <section class="programmes">
+
+            <h2>Find Us</h2>
+
+            <p>
+                Explore the approximate city-centre locations of Pretoria
+                and Johannesburg on the interactive map below.
+                These markers do not represent verified office addresses.
+            </p>
+
+            <div
+                id="foundationMap"
+                style="height: 400px; width: 100%;"
+                aria-label="Interactive map showing approximate Pretoria and Johannesburg city locations"
+            ></div>
+
+        </section>
+
+        <!-- CONTACT FORM -->
+
         <section class="programmes">
 
             <h2>Send Us a Message</h2>
 
+            <p>
+                Complete the form below. You can review your message
+                before sending it using your email application.
+            </p>
+
             <form id="contactForm">
 
-                <div>
-                    <label for="contactName">
-                        Full Name
-                    </label>
-
-                    <input
-                        type="text"
-                        id="contactName"
-                        name="contactName"
-                        required
-                    >
-                </div>
-
-
-                <div>
-                    <label for="contactEmail">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="contactEmail"
-                        name="contactEmail"
-                        required
-                    >
-                </div>
-
-
-                <div>
-                    <label for="contactMessage">
-                        Message
-                    </label>
-
-                    <textarea
-                        id="contactMessage"
-                        name="contactMessage"
-                        rows="6"
-                        required
-                    ></textarea>
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="button"
+                <label for="contactName">Full Name:</label>
+                <input
+                    type="text"
+                    id="contactName"
+                    name="contactName"
+                    required
+                    minlength="2"
+                    maxlength="60"
+                    placeholder="Enter your full name"
                 >
-                    Send Message
+
+                <label for="contactEmail">Email Address:</label>
+                <input
+                    type="email"
+                    id="contactEmail"
+                    name="contactEmail"
+                    required
+                    placeholder="Enter your email address"
+                >
+
+                <label for="messageType">Message Type:</label>
+                <select id="messageType" name="messageType" required>
+                    <option value="">Select message type</option>
+                    <option value="General enquiry">General enquiry</option>
+                    <option value="Programme information">Programme information</option>
+                    <option value="Volunteering">Volunteering</option>
+                    <option value="Sponsorship">Sponsorship</option>
+                    <option value="Feedback">Feedback</option>
+                </select>
+
+                <label for="contactMessage">Your Message:</label>
+                <textarea
+                    id="contactMessage"
+                    name="contactMessage"
+                    rows="5"
+                    minlength="20"
+                    maxlength="1000"
+                    required
+                    placeholder="Enter your message (at least 20 characters)"
+                ></textarea>
+
+                <button type="submit" class="button">
+                    Prepare Email
                 </button>
 
             </form>
 
-
-            <p id="contactMessageDisplay"></p>
-
-        </section>
-
-
-        <!-- Call to action -->
-        <section class="call-to-action">
-
-            <h2>Thank You for Your Interest</h2>
-
-            <p>
-                Every conversation can help us build stronger communities
-                and create better opportunities for children.
-            </p>
+            <p id="contactMessageDisplay" aria-live="polite"></p>
 
         </section>
 
     </main>
 
-
-    <!-- Footer -->
     <footer>
-
-        <p>
-            &copy; 2026 Hope for Every Child Foundation.
-            All rights reserved.
-        </p>
-
-        <p>
-            Website Project by Lufuno Tshivhase
-        </p>
-
+        <p>&copy; 2026 Hope for Every Child Foundation. All rights reserved.</p>
     </footer>
 
+    <!-- Leaflet map library -->
+    <script
+        src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        crossorigin=""
+    ></script>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
-
 </html>

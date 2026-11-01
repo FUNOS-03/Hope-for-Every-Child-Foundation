@@ -1,19 +1,84 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hope for Every Child Foundation | Home</title>
+    <title>Hope for Every Child Foundation | Child Support and Community Programmes</title>
 
-    <meta name="description" content="Hope for Every Child Foundation supports children through education, nutrition and community programmes.">
+    <meta name="description"
+        content="Discover Hope for Every Child Foundation, supporting children through education, nutrition, volunteering and community development in South Africa.">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords"
+        content="child support South Africa, children's education, child nutrition, community development, volunteer opportunities">
+
+    <meta name="author" content="Lufuno Tshivhase">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Photo gallery */
+        .photo-gallery {
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .gallery-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-images img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-images img:hover {
+            transform: scale(1.04);
+        }
+
+        /* Lightbox window */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.9);
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
@@ -22,17 +87,12 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-
-    <!-- Main content -->
     <main>
 
-        <!-- Hero section -->
         <section class="hero">
 
-            <img
-               src="images/hero.jpg" 
-                alt="Children participating in a community activity"
-            >
+            <img src="images/hero.jpg"
+                alt="Children participating in a community activity">
 
             <h1>Hope for Every Child Foundation</h1>
 
@@ -48,16 +108,14 @@
 
         </section>
 
-
-        <!-- Introduction -->
         <section class="intro">
 
             <h2>Welcome to Hope for Every Child Foundation</h2>
 
             <p>
-                Hope for Every Child Foundation is a hypothetical non-profit
-                organisation focused on supporting children and helping them
-                reach their full potential.
+                Hope for Every Child Foundation is a hypothetical
+                non-profit organisation focused on supporting children
+                and helping them reach their full potential.
             </p>
 
             <p>
@@ -68,8 +126,6 @@
 
         </section>
 
-
-        <!-- Programmes -->
         <section class="programmes">
 
             <h2>Our Key Programmes</h2>
@@ -77,11 +133,8 @@
             <div class="cards">
 
                 <article class="card">
-
-                    <img
-                        src="images/education.jpg"
-                        alt="Children learning together"
-                    >
+                    <img src="images/education.jpg"
+                        alt="Children participating in an educational activity">
 
                     <h3>Education Support</h3>
 
@@ -90,60 +143,77 @@
                         opportunities that encourage learning and development.
                     </p>
 
-                    <a href="programmes.html" class="button">
-                        Learn More
-                    </a>
-
+                    <a href="programmes.html" class="button">Learn More</a>
                 </article>
 
-
                 <article class="card">
-
-                    <img
-                      src="images/nutrition.jpg"
-                        alt="Healthy food provided to children"
-                    >
+                    <img src="images/nutrition.jpg"
+                        alt="Healthy food provided to children">
 
                     <h3>Nutrition Support</h3>
 
                     <p>
-                        Promoting children's wellbeing by supporting access to
-                        nutritious food and basic nutritional assistance.
+                        Promoting children's wellbeing by supporting access
+                        to nutritious food and basic nutritional assistance.
                     </p>
 
-                    <a href="programmes.html" class="button">
-                        Learn More
-                    </a>
-
+                    <a href="programmes.html" class="button">Learn More</a>
                 </article>
 
-
                 <article class="card">
-
-                    <img
-                        src="images/Volunteers.jpg"
-                        alt="Community volunteers working together"
-                    >
+                    <img src="images/Volunteers.jpg"
+                        alt="Community volunteers working together">
 
                     <h3>Community Support</h3>
 
                     <p>
-                        Bringing volunteers and communities together to create
-                        positive opportunities for children.
+                        Bringing volunteers and communities together to
+                        create positive opportunities for children.
                     </p>
 
-                    <a href="programmes.html" class="button">
-                        Learn More
-                    </a>
-
+                    <a href="programmes.html" class="button">Learn More</a>
                 </article>
 
             </div>
 
         </section>
 
+        <!-- Interactive photo gallery -->
+        <section class="photo-gallery">
 
-        <!-- Call to action -->
+            <h2>Our Community Gallery</h2>
+
+            <p>Explore moments from our education, nutrition and community support activities.</p>
+
+            <div class="gallery-images">
+
+                <img src="images/education.jpg"
+                    alt="Children taking part in education activities"
+                    class="gallery-image">
+
+                <img src="images/nutrition.jpg"
+                    alt="Nutrition support for children"
+                    class="gallery-image">
+
+                <img src="images/Volunteers.jpg"
+                    alt="Volunteers supporting the community"
+                    class="gallery-image">
+
+            </div>
+
+        </section>
+
+        <!-- Image lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog"
+            aria-modal="true" aria-label="Enlarged gallery image">
+
+            <button class="lightbox-close" id="lightboxClose"
+                aria-label="Close enlarged image">&times;</button>
+
+            <img src="" alt="" id="lightboxImage">
+
+        </div>
+
         <section class="call-to-action">
 
             <h2>Help Us Create Hope</h2>
@@ -161,8 +231,6 @@
 
     </main>
 
-
-    <!-- Footer -->
     <footer>
 
         <p>
@@ -170,11 +238,11 @@
             All rights reserved.
         </p>
 
-        <p>
-            Website Project by Lufuno Tshivhase
-        </p>
+        <p>Website Project by Lufuno Tshivhase</p>
 
     </footer>
+
+    <script src="script.js" defer></script>
 
 </body>
 </html>

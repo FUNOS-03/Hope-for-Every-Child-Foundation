@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,151 +9,231 @@
     <title>About Us | Hope for Every Child Foundation</title>
 
     <meta name="description"
-        content="Learn about Hope for Every Child Foundation, its mission, vision and commitment to supporting children.">
+        content="Learn about Hope for Every Child Foundation, our mission, vision and commitment to improving the lives of vulnerable children and families.">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords"
+        content="Hope for Every Child, child welfare, child support, community development, children's foundation, South Africa">
+
+    <meta name="author" content="Hope for Every Child Foundation">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* FAQ accordion styling */
+        .faq-section {
+            padding: 30px 20px;
+        }
+
+        .faq-item {
+            margin-bottom: 12px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 16px;
+            text-align: left;
+            background: #e8f2e8;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            color: #245c35;
+        }
+
+        .faq-question:hover {
+            background: #d5e8d5;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 16px;
+            background: #ffffff;
+        }
+
+        .faq-answer p {
+            margin: 0;
+        }
+
+        .faq-question:focus {
+            outline: 3px solid #245c35;
+            outline-offset: -3px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="programmes.html">Programmes</a>
-        <a href="enquiry.html">Get Involved</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <header>
+        <h1>Hope for Every Child Foundation</h1>
 
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Our Programmes</a>
+            <a href="enquiry.html">Make an Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
 
-    <!-- Main content -->
     <main>
 
-        <!-- About section -->
         <section class="intro">
-
-            <h1>About Us</h1>
+            <h2>About Us</h2>
 
             <p>
-                Hope for Every Child Foundation is a hypothetical
-                non-profit organisation created to support children
-                and promote positive development within communities.
+                Hope for Every Child Foundation is a non-profit organisation
+                committed to improving the lives of vulnerable children and
+                families through education, nutrition and community support.
             </p>
-
-        </section>
-
-
-        <!-- Mission -->
-        <section class="intro">
-
-            <h2>Our Mission</h2>
 
             <p>
-                Our mission is to create opportunities for children by
-                providing support in education, nutrition and community
-                development. We aim to help children develop the skills,
-                confidence and support they need to reach their potential.
+                We believe every child deserves an opportunity to grow,
+                learn and build a better future, regardless of their
+                background or circumstances.
             </p>
-
         </section>
 
-
-        <!-- Vision -->
-        <section class="intro">
-
-            <h2>Our Vision</h2>
-
-            <p>
-                Our vision is to see a future where every child has access
-                to opportunities, basic support and a safe environment in
-                which they can learn, grow and succeed.
-            </p>
-
-        </section>
-
-
-        <!-- Who we support -->
         <section class="programmes">
-
-            <h2>Who We Support</h2>
+            <h2>Our Mission</h2>
 
             <div class="cards">
 
-                <article class="card">
-
-                    <h3>Children</h3>
-
+                <div class="card">
+                    <h3>Our Purpose</h3>
                     <p>
-                        We focus on supporting children who may need
-                        additional educational, nutritional or community
-                        support.
+                        Our mission is to support vulnerable children and
+                        families by providing access to educational
+                        opportunities, nutritional assistance and
+                        community-based support.
                     </p>
+                </div>
 
-                </article>
-
-
-                <article class="card">
-
-                    <h3>Families</h3>
-
+                <div class="card">
+                    <h3>Our Vision</h3>
                     <p>
-                        Families and caregivers can benefit from community
-                        support and programmes designed to improve children's
-                        wellbeing.
+                        Our vision is a society where every child has the
+                        opportunity to reach their full potential and enjoy
+                        a safe, healthy and hopeful future.
                     </p>
+                </div>
 
-                </article>
-
-
-                <article class="card">
-
-                    <h3>Volunteers</h3>
-
+                <div class="card">
+                    <h3>Our Values</h3>
                     <p>
-                        Volunteers can contribute their time, skills and
-                        resources to support children and community projects.
+                        We value compassion, dignity, accountability,
+                        equality and teamwork. These values guide our
+                        commitment to children and their communities.
                     </p>
+                </div>
 
-                </article>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>Who We Support</h2>
+
+            <p>
+                We aim to assist vulnerable children, disadvantaged
+                families and communities that need additional support.
+                We also welcome volunteers, sponsors and organisations
+                that share our commitment to making a positive difference.
+            </p>
+        </section>
+
+        <!-- Interactive FAQ accordion -->
+        <section class="faq-section">
+
+            <h2>Frequently Asked Questions</h2>
+
+            <p>Click on a question below to find out more about our foundation.</p>
+
+            <div class="faq-item">
+
+                <button class="faq-question" aria-expanded="false">
+                    Who does the foundation support?
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        The foundation aims to support vulnerable children,
+                        disadvantaged families and communities that need
+                        additional assistance.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question" aria-expanded="false">
+                    What programmes do you offer?
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Our main programmes focus on education support,
+                        nutrition support and community development.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question" aria-expanded="false">
+                    How can I become a volunteer?
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        You can express your interest by visiting our
+                        Get Involved page and completing the enquiry form.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="faq-item">
+
+                <button class="faq-question" aria-expanded="false">
+                    Can organisations sponsor our programmes?
+                </button>
+
+                <div class="faq-answer">
+                    <p>
+                        Yes. Organisations and individuals interested in
+                        sponsorship can contact us through the enquiry page.
+                    </p>
+                </div>
 
             </div>
 
         </section>
 
-
-        <!-- Call to action -->
-        <section class="call-to-action">
-
+        <section class="cta">
             <h2>Be Part of the Change</h2>
 
             <p>
-                Learn more about our programmes or contact us to find out
-                how you can become involved.
+                Together, we can create opportunities and brighter futures
+                for children in need.
             </p>
 
             <a href="enquiry.html" class="button">
                 Get Involved
             </a>
-
         </section>
 
     </main>
 
-
-    <!-- Footer -->
     <footer>
-
-        <p>
-            &copy; 2026 Hope for Every Child Foundation.
-            All rights reserved.
-        </p>
-
-        <p>
-            Website Project by Lufuno Tshivhase
-        </p>
-
+        <p>&copy; 2026 Hope for Every Child Foundation. All rights reserved.</p>
     </footer>
 
-</body>
+    <script src="script.js" defer></script>
 
+</body>
 </html>

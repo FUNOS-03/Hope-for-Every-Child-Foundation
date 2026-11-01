@@ -1,157 +1,131 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Get Involved | Hope for Every Child Foundation</title>
+    <title>Make an Enquiry | Hope for Every Child Foundation</title>
 
-    <meta name="description"
-        content="Get involved with Hope for Every Child Foundation by volunteering, supporting programmes or making an enquiry.">
+    <meta name="description" content="Contact Hope for Every Child Foundation to enquire about education, nutrition, community programmes, volunteering or sponsorship opportunities.">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords" content="children's programmes, volunteer enquiry, sponsor children, education support, nutrition support, South Africa">
+
+    <meta name="author" content="Hope for Every Child Foundation">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="programmes.html">Programmes</a>
-        <a href="enquiry.html">Get Involved</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <header>
+        <h1>Hope for Every Child Foundation</h1>
 
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Our Programmes</a>
+            <a href="enquiry.html">Make an Enquiry</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
 
-    <!-- Main content -->
     <main>
 
-        <!-- Introduction -->
         <section class="intro">
-
-            <h1>Get Involved</h1>
+            <h2>Make an Enquiry</h2>
 
             <p>
-                There are many ways to support our work. Complete the form
-                below to let us know how you would like to get involved.
+                Interested in our programmes or volunteering opportunities?
+                Complete the form below and our team will follow up with you.
             </p>
-
         </section>
 
-
-        <!-- Enquiry form -->
         <section class="programmes">
 
-            <h2>Send Us an Enquiry</h2>
+            <h2>Enquiry Form</h2>
 
-            <form id="enquiryForm">
+            <form id="enquiryForm" action="enquiry.html" method="POST">
 
-                <div>
-                    <label for="name">Full Name</label>
-
-                    <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                    >
-                </div>
-
-
-                <div>
-                    <label for="email">Email Address</label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                    >
-                </div>
-
-
-                <div>
-                    <label for="interest">
-                        How would you like to help?
-                    </label>
-
-                    <select
-                        id="interest"
-                        name="interest"
-                        required
-                    >
-
-                        <option value="">Please select</option>
-
-                        <option value="volunteer">
-                            Volunteer
-                        </option>
-
-                        <option value="education">
-                            Support Education
-                        </option>
-
-                        <option value="nutrition">
-                            Support Nutrition
-                        </option>
-
-                        <option value="community">
-                            Community Support
-                        </option>
-
-                    </select>
-                </div>
-
-
-                <div>
-                    <label for="message">Message</label>
-
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="6"
-                        required
-                    ></textarea>
-                </div>
-
-
-                <button
-                    type="submit"
-                    class="button"
+                <label for="fullName">Full Name:</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    name="fullName"
+                    required
+                    minlength="2"
+                    maxlength="60"
+                    placeholder="Enter your full name"
                 >
+
+                <label for="email">Email Address:</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    placeholder="Enter your email address"
+                >
+
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                    pattern="(\+27|0)[0-9]{9}"
+                    title="Enter a valid South African number, for example 0821234567 or +27821234567."
+                    placeholder="e.g. 0821234567"
+                >
+
+                <label for="enquiryType">Type of Enquiry:</label>
+                <select id="enquiryType" name="enquiryType" required>
+                    <option value="">Select an enquiry type</option>
+                    <option value="Programme enquiry">Programme enquiry</option>
+                    <option value="Volunteering">Volunteering</option>
+                    <option value="Sponsorship">Sponsorship</option>
+                    <option value="General enquiry">General enquiry</option>
+                </select>
+
+                <label for="programme">Programme of Interest:</label>
+                <select id="programme" name="programme" required>
+                    <option value="">Select a programme</option>
+                    <option value="Education Support">Education Support</option>
+                    <option value="Nutrition Support">Nutrition Support</option>
+                    <option value="Community Support">Community Support</option>
+                    <option value="Volunteering">Volunteering</option>
+                    <option value="Sponsorship">Sponsorship</option>
+                </select>
+
+                <label for="message">Your Message:</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    minlength="20"
+                    maxlength="1000"
+                    required
+                    placeholder="Please provide details about your enquiry (at least 20 characters)."
+                ></textarea>
+
+                <button type="submit" class="button">
                     Submit Enquiry
                 </button>
 
             </form>
 
-
-            <p id="enquiryMessage"></p>
+            <p id="enquiryMessage" aria-live="polite"></p>
 
         </section>
 
     </main>
 
-
-    <!-- Footer -->
     <footer>
-
-        <p>
-            &copy; 2026 Hope for Every Child Foundation.
-            All rights reserved.
-        </p>
-
-        <p>
-            Website Project by Lufuno Tshivhase
-        </p>
-
+        <p>&copy; 2026 Hope for Every Child Foundation. All rights reserved.</p>
     </footer>
 
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 
 </body>
-
 </html>
